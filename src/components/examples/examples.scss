@@ -1,0 +1,57 @@
+@import '../../style/base/variables';
+@import '../../style/base/mixins';
+
+.examples {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-color: rgb(248, 246, 246);
+    .title__section-title{
+        z-index: 2;
+    }
+    &-title{
+        @include before_circle;
+        position: relative;
+        z-index: 2;
+        left: 20px;
+        padding-top: 1px;
+        padding-left: 10px;
+    }
+    &__joke{
+        margin-top: 50px;
+        &-setup{
+            margin-top: 15px;
+        }
+        &-punchline{
+            margin-top: 10px;
+            color: $main-color;
+            span{
+                filter: blur(4px);
+                cursor: default;
+                &:hover{
+                    filter: none;
+                }
+            }
+        }
+    }
+    &__numbers{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        &-subtitle{
+            margin-top: 15px;
+        }
+        &-form{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        &-input{
+            padding: 0 10px;
+            margin-left: 10px;
+            margin-right: 20px;
+            width: 100px;
+            height: 25px;
+            font-size: 12px;
+            border: 2px solid $second-color;
+            border-radius: 45px;
+        }
+    }
+}

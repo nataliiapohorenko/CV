@@ -1,0 +1,94 @@
+@import '../../style/base/mixins';
+
+.education{
+    padding-top: 100px;
+    padding-left: 15px;
+    width: 500px;
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__title {
+        position: relative;
+        padding-left: 35px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: $main-color;
+            border-radius: 100%;
+            left: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__list {
+        list-style-type: none;
+        &-item {
+            position: relative;
+            &:after {
+                content: '';
+                width: 1px;
+                height: calc(100% + 16px);
+                position: absolute;
+                top: -16px;
+                left: 0;
+                background-color: #000;
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 45px;
+            position: absolute;
+            top: 68px;
+            background-color: #000;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+            h4 {
+                margin-bottom: 0;
+            }
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-size: 13px;
+            line-height: 18px;
+            ul,li {
+                list-style: inside url(/icons/laptop-svgrepo-com.svg);
+                
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            width: 36px;
+            height: 36px;
+            @include before_circle;
+            &:before {
+                z-index: 0;
+                top: 0;
+            }
+            img {
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+    }
+}
